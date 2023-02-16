@@ -1,5 +1,4 @@
-
-const allProductsUrl = 'https://private-anon-f3881b6eb6-pizzaapp.apiary-mock.com/restaurants/restaurantId/menu?category=Pizza&orderBy=ranks'
+const allProductsUrl = 'https://62cd95fca43bf780085b5573.mockapi.io/api/v1/Pizzeria'
 
 
 const getElement = (selection) => {
