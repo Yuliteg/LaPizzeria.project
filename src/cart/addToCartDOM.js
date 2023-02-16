@@ -1,6 +1,7 @@
 import { formatPrice, getElement } from '../utils.js';
 const cartItemsDOM = getElement('.cart-items');
-const addToCartDOM = ({ id, name, price, img, amount }) => {
+const addToCartDOM = ({ id, name, prices, img, amount }) => {
+
   const article = document.createElement('article');
   article.classList.add('cart-item');
   article.setAttribute('data-id', id);
@@ -11,7 +12,7 @@ const addToCartDOM = ({ id, name, price, img, amount }) => {
             />  
             <div>
               <h4 class="cart-item-name">${name}</h4>
-              <p class="cart-item-price">${formatPrice(price)}</p>
+              <p class="cart-item-price">${formatPrice(prices)}</p>
               <button class="cart-item-remove-btn" data-id="${id}">remove</button>
             </div>
           

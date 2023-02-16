@@ -793,7 +793,7 @@ Products Page
     gap: 1rem;
   }
   .products-container .product-img {
-    width: 105%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }

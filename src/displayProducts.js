@@ -1,18 +1,11 @@
 import { formatPrice } from './utils.js';
 import { addToCart } from './cart/setupCart.js';
-import img from './dataImg.js'
-
-
 
 
 const display = (products, element, filters) => {
      
    element.innerHTML = products.map((product) => {
-
-
-       const {id, name, price, img } = product;
-
-
+       const {id, name, prices, img } = product;
 
            return `
             <article class="product">
@@ -29,7 +22,7 @@ const display = (products, element, filters) => {
              </div>
               <footer>
                 <p class="product-name">${name}</p>
-                <h4 class="product-price">${formatPrice(price)}</h4>
+                <h4 class="product-price">${formatPrice(prices)}</h4>
               </footer>
           </article>
            `

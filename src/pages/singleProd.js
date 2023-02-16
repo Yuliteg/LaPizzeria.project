@@ -5,15 +5,8 @@ import '../cart/setupCart.js';
 // specific
 import { addToCart } from '../cart/setupCart.js';
 import { getElement, formatPrice } from '../utils.js';
-import {store} from '../store.js'
-import firstProd from '../dataAboutSingleProd/first.prod.js';
-import secondProd from '../dataAboutSingleProd/secondProd.js';
-import thirdProd from '../dataAboutSingleProd/thirdProd.js';
-import fourProd from '../dataAboutSingleProd/fourProd.js';
-import fiveProd from '../dataAboutSingleProd/fiveProd.js';
-import sixProd from '../dataAboutSingleProd/sixProd.js';
-import sevenProd from '../dataAboutSingleProd/sevenProd.js';
-
+import { store } from '../store.js'
+import { allProductsUrl } from '../utils.js';
 
 // selections
 const loading = getElement('.page-loading');
@@ -28,55 +21,44 @@ const cartBtn = getElement('.addToCartBtn');
 const singleProd = getElement('.single-product')
 
 
-
 const urlId = window.location.search
- let productId;
+let productId;
 
+window.addEventListener('DOMContentLoaded', async function () {
 
+  loading.style.display = 'none'
 
-const singleProdFunct = (obj) => {
-  const single = obj.map((item) => {
-      const {id, name, price, img, category, topping} = item
+  try {
+    const response = await fetch(`${allProductsUrl}${urlId}`)
+    console.log(response);
+    if (response.status >= 200 && response.status <= 299) {
+      const product = await response.json();
+      const single = product.map((prod) => {
+        const { id, name, company, category, prices, topping, img } = prod;
+
         productId = id
         document.title = `${name.toUpperCase()}`
         imgDOM.src = img
         titleDOM.textContent = name
         companyDOM.textContent = `${category}`
-        priceDOM.textContent = formatPrice(price)
+        priceDOM.textContent = formatPrice(prices)
         descDOM.textContent = topping
-        return productId
-  })
-}
-
-
-
-window.addEventListener('DOMContentLoaded', async function() {
-
-    loading.style.display = 'none'
-
-
-if (urlId === '?id=1') {
-  singleProdFunct(firstProd)
-} else if (urlId === '?id=2') {
-  singleProdFunct(secondProd)
-} else if(urlId === '?id=3') {
-  singleProdFunct(thirdProd)
-} else if(urlId === '?id=4') {
-  singleProdFunct(fourProd)
-} else if(urlId === '?id=5') {
-  singleProdFunct(fiveProd)
-} else if(urlId === '?id=6') {
-  singleProdFunct(sixProd)
-} else {
-  singleProdFunct(sevenProd)
-}
+      })
+    }
+  } catch (error) {
+    console.log(console.log(error));
+    centerDOM.innerHTML = `
+      <div>
+        <h3 class="error">Something went wrong!</h3>
+        <a href="index.html" class="btn">Home</a>
+      </div>
+      `
+  }
 })
- 
 
-cartBtn.addEventListener('click', function() {
- 
+
+cartBtn.addEventListener('click', function () {
   addToCart(productId)
 })
 
 
- 
