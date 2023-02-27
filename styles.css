@@ -966,7 +966,6 @@ Single Product Page
 }
 
 .delivery-line {
-  
   border-bottom: 3px solid rgb(172, 145, 26);
   width: 100%;
   margin-bottom: 10%;
@@ -989,6 +988,10 @@ Single Product Page
   justify-content: right;
   background: url(https://thumb.tildacdn.com/tild6636-3863-4132-b765-323264353838/-/format/webp/01.png);
   background-repeat: no-repeat;
+}
+.delivery-img {
+  max-width: 100%;  
+  height: auto;  
 }
 
 
