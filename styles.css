@@ -598,7 +598,6 @@ Title
   font-weight: 500;
 }
 .title span {
-  color: var(--clr-primary-5);
   font-size: 0.85em;
   margin-right: 1rem;
 }
@@ -610,7 +609,6 @@ product
 .product-img {
   height: 20rem;
   object-fit: contain;
-  border-radius: var(--radius);
 }
 
 .product-container {
@@ -838,23 +836,27 @@ Single Product Page
   background: var(--clr-grey-10);
   color: var(--clr-grey-5);
 }
+
 .page-hero-title {
   font-weight: 500;
 }
+
 .single-product {
   padding: 2rem 0;
 }
+
 .single-product-center {
   margin: 2rem auto;
   display: grid;
   gap: 1rem 2rem;
 }
+
 .single-product-img {
   object-fit: contain;
   width: 80%;
   height: 30rem;
-  border-radius: var(--radius);
 }
+
 .single-product-company {
   font-size: 1.2rem;
   color: var(--clr-grey-8);
@@ -862,6 +864,7 @@ Single Product Page
   letter-spacing: var(--spacing);
   margin-bottom: 1.25rem;
 }
+
 .single-product-price {
   color: var(--clr-grey-3);
   font-size: 1.25rem;
@@ -887,10 +890,6 @@ Single Product Page
   }
 }
 
-
-
-
-
 .colontitul{
     position: relative;
     width: 100%;
@@ -900,7 +899,6 @@ Single Product Page
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .menus{
@@ -934,8 +932,6 @@ Single Product Page
     font-size: 1.1em;
 }   
 
-
-
 .delivery {
   width: 90vw;
   margin: 4rem auto;
@@ -949,16 +945,12 @@ Single Product Page
   margin-bottom: 10%;
 }
 
-
-
-
 .delivery-name {
   font-size: 3.5rem;
   font-family: "Times New Roman", Times, serif;
   margin-bottom: 50px;
   margin-top: 30px;
 }
-
 
 .time-work {
   margin-top: 20px;
@@ -967,10 +959,9 @@ Single Product Page
 
 .delivery-line {
   border-bottom: 3px solid rgb(172, 145, 26);
-  width: 100%;
+  width: 95%;
   margin-bottom: 10%;
 }
-
 
 .text-delivery {
   font-size: 1.5rem;
@@ -994,14 +985,11 @@ Single Product Page
   height: auto;  
 }
 
-
-
 .img-about-time-work {
   display: flex;
   padding: 20px 40px;
   margin-top: 60px;
   }
-
 
 .img-about-page-2 {
   position: relative;
@@ -1009,10 +997,6 @@ Single Product Page
   width: 85%;
   height: 80%;
 }
-
-
-
-
 
  .content-hours-work {
    display: flex;
