@@ -3,7 +3,6 @@ import display from "../displayProducts.js";
 
 
 const setupPrice = (store) => {
-    console.log(store);
     const priceInput = getElement('.price-filter');
     const priceValue = getElement('.price-value');
 

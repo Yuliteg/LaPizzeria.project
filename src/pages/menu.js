@@ -5,11 +5,9 @@ import '../cart/setupCart.js';
 import setupSearch from '../filters/search.js';
 import setupCategory from '../filters/category.js';
 import setupPrice from '../filters/price.js';
-// specific imports
 import { store, setupStore } from '../store.js';
 import display from '../displayProducts.js';
 import { getElement } from '../utils.js';
-// import fetch products
 import fetchProducts from '../fetchProducts.js';
 
 

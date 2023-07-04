@@ -1,4 +1,3 @@
-// import
 import {
   getStorageItem,
   setStorageItem,
@@ -17,13 +16,12 @@ let cart = getStorageItem('cart')
 
 export const addToCart = (id) => {
   let item = cart.find((cartItem) => cartItem.id == id)
-  console.log(item);
 
   if (!item) {
     let product = findProduct(id);
-    // add item to the the
+
     product = { ...product, amount: 1 };
-    console.log(product);
+
     cart = [...cart, product];
     // add item to the DOM;
     addToCartDOM(product);
@@ -36,10 +34,8 @@ export const addToCart = (id) => {
     newAmount.textContent = amount;
   }
 
-
   displayCartItemCount()
   displayCartTotal()
-
 
   setStorageItem('cart', cart)
   openCart()
@@ -48,7 +44,6 @@ export const addToCart = (id) => {
 
 function displayCartItemCount() {
   const amount = cart.reduce((total, cartItem) => {
-    console.log(cartItem.amount);
     return (total += cartItem.amount);
   }, 0);
   cartItemCountDOM.textContent = amount;

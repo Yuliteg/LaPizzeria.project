@@ -1,4 +1,3 @@
-
 /*
 =============== 
 Variables
@@ -46,6 +45,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -59,6 +59,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -67,12 +68,15 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -83,18 +87,23 @@ h4 {
   margin-bottom: 0.75rem;
   font-weight: 400;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
@@ -104,18 +113,23 @@ p {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -123,6 +137,7 @@ p {
     line-height: 1;
   }
 }
+
 .img {
   width: 100%;
   display: block;
@@ -180,6 +195,7 @@ p {
   align-items: center;
   justify-content: center;
 }
+
 /*
 =============== 
 Navbar
@@ -253,72 +269,70 @@ Navbar
   font-size: 1rem;
 }
 
+.nav-logo-white {
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.flex {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 800px) {
-    .nav-center {
-      position: relative;
-    }
-    .nav-logo {
-      position: absolute;
-      top:1%;
-        font-size: 2.75rem;
-        margin: 1.5rem 0;  
-      transform: translate(-50%, -50%);
-      font-family: "Times New Roman", Times, serif;
-    }
-
-   .nav-logo-white {
-    position: absolute;
-    top:25%;
-    left: 60%;
-    color: white;
-    font-size: 2.5rem;
-    font-family: "Times New Roman", Times, serif;
-    } 
-
-    .toggle-nav {
-      display: none;
-    }
-    .nav-links {
-      display: flex;
-      font-size: 1.5rem;
-      text-transform: capitalize;
-    }
-    .nav-link {
-      color: var(--clr-white);
-      margin-right: 3rem;
-      letter-spacing: var(--spacing);
-      transition: var(--transition);
-      font-size: 1.25rem;
-    }
-    .nav-link:hover {
-      color: var(--clr-primary-5);
-    }
+  .nav-center {
+    position: relative;
   }
 
-
-  @media screen and (min-width: 700px) {
-    .nav-logo {
-      left: 80%;
-
-    }
+  .toggle-nav {
+    display: none;
   }
 
-  @media screen and (min-width: 992px) {
-    .nav-logo {
-      left: 65%;
-
-    }
+  .nav-links {
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: capitalize;
   }
+
+  .nav-link {
+    color: var(--clr-white);
+    margin-right: 3rem;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    font-size: 1.25rem;
+  }
+
+  .nav-link:hover {
+    color: var(--clr-primary-5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-logo-white {
+    font-size: 1.7rem;
+  }
+
+  .flex {
+    width: 40%;
+  }
+}
+
 /* page navbar */
 .page .nav-link {
   color: var(--clr-grey-1);
 }
+
 .page .nav-link:hover {
   color: var(--clr-primary-5);
 }
+
 .page .toggle-cart {
   color: var(--clr-grey-1);
 }
+
 /*
 =============== 
 Hero
@@ -336,7 +350,10 @@ Hero
 
 .hero-container {
   width: 90vw;
-  max-width: var(--max-width);
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 10vw;
 }
 
 .hero h1 {
@@ -353,14 +370,10 @@ Hero
   background: transparent;
   border: 1px solid var(--clr-white);
   padding: 0.7rem 0.75rem;
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  margin-right: -50%;
   text-transform: uppercase;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
-  transition: var(--transition); 
+  transition: var(--transition);
 }
 
 .hero-btn:hover {
@@ -368,18 +381,10 @@ Hero
   color: var(--clr-primary-5);
 }
 
-
-@media screen and (min-width: 676px) {
-  .hero h3 {
-    font-size: 1rem;
-    margin: 1rem 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero h3 {
-    font-size: 1.5rem;
-    margin: 1.3rem 0;
+@media screen and (max-width: 560px) {
+  .hero-text {
+    margin-left: 0.5rem;
+    max-width: 50vw;
   }
 }
 
@@ -387,10 +392,6 @@ Hero
   .hero h1 {
     font-size: 4.55rem;
     letter-spacing: 5px;
-  }
-  .hero h3 {
-    font-size: 2.75rem;
-    margin: 1.5rem 0;
   }
 }
 
@@ -462,6 +463,7 @@ Sidebar
     display: none;
   }
 }
+
 /*
 =============== 
 Cart
@@ -549,7 +551,7 @@ Cart
   height: 70px;
   object-fit: cover;
   border-radius: var(--radius);
-} 
+}
 
 .cart-item-name {
   margin-bottom: 0.15rem;
@@ -585,6 +587,7 @@ Cart
   font-size: 0.85rem;
   padding: 0.25rem;
 }
+
 /*
 =============== 
 Title
@@ -597,10 +600,12 @@ Title
   align-items: center;
   font-weight: 500;
 }
+
 .title span {
   font-size: 0.85em;
   margin-right: 1rem;
 }
+
 /*
 =============== 
 product
@@ -693,16 +698,17 @@ product
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 /*
 =============== 
 About Page
 ===============
 */
 .about-text {
-   line-height: 2;
+  line-height: 2;
   margin: 0 auto;
   margin-top: 5%;
-  font-size: 1.4rem; 
+  font-size: 1.4rem;
   float: left;
   width: 38%;
   padding: 5px;
@@ -726,6 +732,7 @@ Products Page
   position: sticky;
   top: 1rem;
 }
+
 .filters h4 {
   font-weight: 500;
   margin: 1.5rem 0 0.5rem;
@@ -769,11 +776,13 @@ Products Page
   .products {
     grid-template-columns: 200px 1fr;
   }
+
   .products-container .product-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .categories {
     position: sticky;
     top: 1rem;
@@ -784,38 +793,46 @@ Products Page
   .products {
     grid-template-columns: 200px 1fr;
   }
+
   .products-container .product-img {
     width: 100%;
     height: 100%;
   }
+
   .categories {
     position: sticky;
     top: 1rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   .products-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
   .products-container .product-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .products-container .product-name {
     font-size: 0.85rem;
   }
+
   .products-container .product-price {
     font-size: 0.85rem;
   }
 }
+
 @media screen and (min-width: 1170px) {
   .products-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .filter-error {
   position: absolute;
   top: 5rem;
@@ -824,6 +841,7 @@ Products Page
   text-align: center;
   margin-top: 4rem;
 }
+
 /*
 =============== 
 Single Product Page
@@ -884,53 +902,56 @@ Single Product Page
   max-width: 25em;
   line-height: 1.8;
 }
+
 @media screen and (min-width: 992px) {
   .single-product-center {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.colontitul{
-    position: relative;
-    width: 100%;
-    padding: 20px 50px;
-    background: rgb(48, 42, 42);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.colontitul {
+  position: relative;
+  width: 100%;
+  padding: 20px 50px;
+  background: rgb(48, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.menus{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
+.menus {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
 }
 
-.menus li{
-    list-style: none;
+.menus li {
+  list-style: none;
 }
 
 .menus li a {
-    font-size: 1.2em;
-    color: #fff;
-    opacity: 0.75;
-    margin: 0 15px;
-    text-decoration: none;
-    display: inline-block;
+  font-size: 1.2em;
+  color: #fff;
+  opacity: 0.75;
+  margin: 0 15px;
+  text-decoration: none;
+  display: inline-block;
 }
+
 .menus li a:hover {
-    opacity: 1;
+  opacity: 1;
 }
+
 .colontitul p {
-    color: #fff;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.1em;
-}   
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
 
 .delivery {
   width: 90vw;
@@ -941,7 +962,7 @@ Single Product Page
 .delivery-container {
   display: flex;
   flex-direction: row;
-  justify-content:   space-around;
+  justify-content: space-around;
   margin-bottom: 10%;
 }
 
@@ -980,16 +1001,17 @@ Single Product Page
   background: url(https://thumb.tildacdn.com/tild6636-3863-4132-b765-323264353838/-/format/webp/01.png);
   background-repeat: no-repeat;
 }
+
 .delivery-img {
-  max-width: 100%;  
-  height: auto;  
+  max-width: 40vw;
+  height: auto;
 }
 
 .img-about-time-work {
   display: flex;
   padding: 20px 40px;
   margin-top: 60px;
-  }
+}
 
 .img-about-page-2 {
   position: relative;
@@ -998,18 +1020,17 @@ Single Product Page
   height: 80%;
 }
 
- .content-hours-work {
-   display: flex;
-   margin-top: 2%;
-   width: 45%; 
+.content-hours-work {
+  display: flex;
+  margin-top: 2%;
+  width: 45%;
   color: #404040;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.75;
-  /* border: 2px solid #3a8014; */
-} 
+}
 
- .opening-hours1 {
+.opening-hours1 {
   position: relative;
   border: 2px solid #3a8014;
   padding: 5%;
@@ -1025,7 +1046,7 @@ Single Product Page
   margin-bottom: 5%;
   letter-spacing: .2em;
   text-transform: uppercase;
-}  
+}
 
 .line-hour-work {
   border: 1px solid #3a8014;
@@ -1033,8 +1054,7 @@ Single Product Page
   margin-bottom: 2%;
 }
 
-.time-work-l
-{
+.time-work-l {
   float: right;
   font-weight: 600;
 }

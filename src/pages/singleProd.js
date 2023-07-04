@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', async function () {
 
   try {
     const response = await fetch(`${allProductsUrl}${urlId}`)
-    console.log(response);
+
     if (response.status >= 200 && response.status <= 299) {
       const product = await response.json();
       const single = product.map((prod) => {
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', async function () {
       })
     }
   } catch (error) {
-    console.log(console.log(error));
+    console.log(error);
     centerDOM.innerHTML = `
       <div>
         <h3 class="error">Something went wrong!</h3>
